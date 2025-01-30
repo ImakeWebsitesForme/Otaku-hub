@@ -12,3 +12,4 @@ document.getElementById("animeButton").addEventListener("click", function() {
 });
 
 document.getElementById("backgroundMusic").play();  // Automatically start playing music
+js
