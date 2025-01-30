@@ -1,4 +1,3 @@
-// 1. Random Anime Fact Button
 document.getElementById("animeButton").addEventListener("click", function() {
     const facts = [
         "Did you know that **Naruto**'s creator, Masashi Kishimoto, originally wanted Naruto to be a comic about a ninja who didn't know any jutsu?",
@@ -51,5 +50,3 @@ window.onscroll = function() {
 scrollToTopBtn.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-js 

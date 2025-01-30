@@ -1,4 +1,4 @@
-<jaden html>
+DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,33 +12,30 @@
         <h1>Welcome to AnimeHub!</h1>
         <p>Your ultimate anime destination</p>
         <button id="animeButton">Show Random Anime Fact</button>
+        <div id="factDisplay"></div> <!-- Added to display the random fact -->
     </header>
 
     <section id="anime-info">
         <h2>Explore the World of Anime!</h2>
-        <p>Step into the vibrant world of anime, where **otaku** culture thrives. Whether you're a fan of **shounen** action, **shoujo** romance, or **isekai** adventures, there's something for everyone. Embrace the **kawaii** aesthetic, from adorable **chibi** characters to the emotional depth of **moe** moments.</p>
+        <p>Step into the vibrant world of anime...</p>
         <div class="anime-image">
             <img src="https://www.anime-planet.com/images/characters/naruto-uzumaki-34355.png" alt="Naruto Uzumaki">
         </div>
     </section>
 
-    <div id="factDisplay">
-        <!-- Random fact will be displayed here -->
-    </div>
-
     <footer>
         <p>&copy; 2025 AnimeHub. All Rights Reserved.</p>
-        <button id="muteButton">Mute</button> <!-- Mute button -->
-        <button id="playPauseButton">Play Music</button> <!-- Play/Pause button -->
-        <button id="scrollToTopBtn" style="display:none;">↑</button> <!-- Scroll to Top button -->
     </footer>
 
-    <audio id="backgroundMusic" loop autoplay>
+    <audio id="backgroundMusic" loop>
         <source src="anime-music.mp3" type="audio/mpeg">
         <source src="anime-music.ogg" type="audio/ogg">
     </audio>
 
-    <script src="scripts.js"></script>
+    <button id="playPauseButton">Play Music</button>
+    <button id="muteButton">Mute</button>
+    <button id="scrollToTopBtn" style="display:none;">↑</button>
+
+    <script src="scripts.js"></script> <!-- Ensure this is at the end -->
 </body>
 </html>
-html
