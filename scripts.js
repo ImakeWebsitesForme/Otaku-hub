@@ -1,6 +1,7 @@
+// 1. Random Anime Fact Button
 document.getElementById("animeButton").addEventListener("click", function() {
     const facts = [
-        "Did you know that **Naruto**'s! creator, Masashi Kishimoto, originally wanted Naruto to be a comic about a ninja who didn't know any jutsu?",
+        "Did you know that **Naruto**'s creator, Masashi Kishimoto, originally wanted Naruto to be a comic about a ninja who didn't know any jutsu?",
         "In Japan, it's common to see anime-inspired **bento** lunches, with cute characters made out of rice and vegetables!",
         "The term **otaku** originally meant a person with an obsession, but in Japan, it's now commonly used to describe passionate anime fans.",
         "**Shounen** anime like **One Piece** and **Dragon Ball Z** have become global phenomenons, attracting fans from all around the world!",
@@ -8,8 +9,22 @@ document.getElementById("animeButton").addEventListener("click", function() {
     ];
 
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
-    alert(randomFact);
+    
+    // Display the fact on the webpage instead of alerting
+    const factDisplay = document.getElementById("factDisplay");
+    factDisplay.innerHTML = `<p><strong>Random Anime Fact:</strong> ${randomFact}</p>`;
 });
 
-document.getElementById("backgroundMusic").play();  // Automatically start playing music
-js
+// 2. Background Music Controls (play/pause)
+const audio = document.getElementById("backgroundMusic");
+document.getElementById("playPauseButton").addEventListener("click", function() {
+    if (audio.paused) {
+        audio.play();
+        this.textContent = "Pause Music";
+    } else {
+        audio.pause();
+        this.textContent = "Play Music";
+    }
+});
+
+// 3. Scroll to Top
