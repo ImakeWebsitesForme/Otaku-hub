@@ -27,4 +27,27 @@ document.getElementById("playPauseButton").addEventListener("click", function() 
     }
 });
 
-// 3. Scroll to Top
+// 3. Mute/Unmute Button
+document.getElementById("muteButton").addEventListener("click", function() {
+    if (audio.muted) {
+        audio.muted = false;
+        this.textContent = "Mute";
+    } else {
+        audio.muted = true;
+        this.textContent = "Unmute";
+    }
+});
+
+// 4. Scroll to Top Button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+window.onscroll = function() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+scrollToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
